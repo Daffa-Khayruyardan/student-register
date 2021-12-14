@@ -1,24 +1,21 @@
 // import some npm packages
 const express = require('express');
 const path = require('path');
-
-// create host port
-const PORT = 3000;
-
-// initiate express class 
-const app = express();
-
-// use user routes here
+const ejsLayout = require('express-ejs-layouts');
 const UserRoutes = require('./routes/UserRoute');
 
-// use middleware to post static file
+// initiate some variable
+const app = express();
+const PORT = 3000;
+
+// setup some middleware here
 app.use(express.static(path.join(__dirname, '/public')));
+app.use(ejsLayout);
 
 // set view engine and views folder
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views'));
 
-// import and use user routes
+// import user routes
 app.use('/', UserRoutes);
 
 // run the web server in port 3000

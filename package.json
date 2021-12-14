@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon app.js",
-    "build": "gulp"
+    "serve": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "mariadb": "^2.5.5"
   }
 }
