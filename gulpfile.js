@@ -51,7 +51,7 @@ function jsMinify() {
 
 // make watch task to all compile process
 function watchAll() {
-    watch('src/views/*.html', browserReload);
+    watch('src/views/*.ejs', browserReload);
     watch(['src/scss/*.scss', 'src/js/*.js', 'src/views/*.ejs'], series(sassMinify, jsMinify, ejsMinify, browserReload));
 }
 
