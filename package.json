@@ -12,13 +12,15 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "gulp-terser": "^2.1.0"
   },
   "devDependencies": {
     "browser-sync": "^2.27.7",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-ejs": "^5.1.0",
-    "gulp-sass": "^5.0.0"
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.45.0"
   }
 }
