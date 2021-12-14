@@ -4,7 +4,7 @@ const path = require('path');
 const gulpSass = require('gulp-sass')(require('sass'));
 const gulpEjs = require('gulp-ejs');
 const gulpCleanCss = require('gulp-clean-css');
-const gulpJsMinify = require('gulp-minify');
+const gulpTerser = require('gulp-terser');
 const browserSync = require('browser-sync').create();
 
 // make browser sync gulp task 
@@ -30,7 +30,7 @@ function browserReload(cb) {
 // make ejs compile and minify task
 function ejsMinify() {
     return src('src/views/*.ejs')
-        .pipe(gulpEjs('src/views/*.ejs'))
+        .pipe(gulpEjs())
         .pipe(dest('dist'));
 }
 
@@ -45,17 +45,19 @@ function sassMinify() {
 // make javascript compile and minify task
 function jsMinify() {
     return src('src/js/*.js')
-        .pipe(gulpJsMinify())
+        .pipe(gulpTerser())
         .pipe(dest('dist'));
 }
 
 // make watch task to all compile process
 function watchAll() {
+    watch('src/views/*.html', browserReload);
     watch(['src/scss/*.scss', 'src/js/*.js', 'src/views/*.ejs'], series(sassMinify, jsMinify, ejsMinify, browserReload));
 }
 
 // run all task in gulp
 exports.default = series(
+    ejsMinify,
     sassMinify,
     jsMinify,
     browserHost,
