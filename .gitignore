@@ -1,8 +1,5 @@
 # ignore node modules file to make light
 node_modules/
 
-# ignore package-lock json file
-package-lock.json 
-
 # ignore compiled javascript and css file
 dist/
