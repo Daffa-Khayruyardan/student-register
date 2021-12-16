@@ -3,7 +3,8 @@ const mariadb = require('mariadb');
 const pool = mariadb.createPool({
     host: 'localhost',
     use: 'root',
-    password: '',
+    password: 'justapp',
+    database: 'student'
 });
 
 async function connectDB() {
@@ -12,9 +13,6 @@ async function connectDB() {
     try {
         console.log('running');
         getPool = await pool.getConnection();
-
-        const show = await getPool.query('show databases');
-        console.log(show);
         
     }catch(err) {
         console.log(err);
