@@ -2,6 +2,7 @@
 const { src, dest, series } = require('gulp');
 const gulpCleanCss = require('gulp-clean-css');
 const gulpTerser = require('gulp-terser');
+const gulpBabel = require('gulp-babel');
 
 // minify css file
 function cssMinify() {
@@ -13,8 +14,8 @@ function cssMinify() {
 // transpile and minify js file
 function jsMinify() {
     return src('./public/scripts/*.js')
-        .pipe()
-        .pipe()
+        .pipe(gulpBabel())
+        .pipe(gulpTerser())
         .pipe(dest('dist'));
 }
 
