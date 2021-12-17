@@ -11,10 +11,16 @@ function cssMinify() {
         .pipe(dest('dist'));
 }
 
-// transpile and minify js file
-function jsMinify() {
+// transppile js file
+function jsTranspile() {
     return src('./public/scripts/*.js')
         .pipe(gulpBabel())
+        .pipe(dest('dist'));
+}
+
+// minify js file
+function jsMinify() {
+    return src('./public/scripts/*.js')
         .pipe(gulpTerser())
         .pipe(dest('dist'));
 }
@@ -22,5 +28,6 @@ function jsMinify() {
 // set default task for gulp
 exports.default = series(
     cssMinify,
+    jsTranspile,
     jsMinify
 )
