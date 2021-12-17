@@ -1,11 +1,12 @@
 // import some packages here
 const { src, dest, series } = require('gulp');
 const gulpCleanCss = require('gulp-clean-css');
+const gulpTerser = require('gulp-terser');
 
 // minify css file
 function cssMinify() {
     return src('./public/style/style.css')
-        .pipe()
+        .pipe(gulpCleanCss())
         .pipe(dest('dist'));
 }
 
