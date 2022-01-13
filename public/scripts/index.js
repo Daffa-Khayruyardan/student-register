@@ -1,9 +1,1 @@
-function Hello() {
-    let greet = () => {
-        console.log('Hello World!');
-    };
-
-    greet()
-};
-
-Hello();
+console.log('Hello World');
