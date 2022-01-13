@@ -4,15 +4,32 @@ const express = require('express');
 // init router function 
 const router = express.Router();
 
-// make some router here
-router.get('/', (req,res) => {
+// make homepage route here
+router.get('/home', (req,res) => {
     res.render('home', {
         layout: 'layouts/index'
     });
 });
 
-router.post('/ans', (req,res) => {
-    console.log(req.body);
+// make login route here
+router.get('/login', (req,res) => {
+    res.render('login', {
+        layout: 'layouts/index'
+    })
+})
+
+// make list route here
+router.get('/list', (req,res) => {
+    res.render('list', {
+        layout: 'layouts/index'
+    })
+});
+
+// make about route here
+router.get('/about', (req,res) => {
+    res.render('about', {
+        layout: 'layouts/index'
+    })
 });
 
 // export this module 
