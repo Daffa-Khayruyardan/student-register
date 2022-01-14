@@ -144,18 +144,51 @@
 
 #login-form {
     display: flex;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    flex-direction: column;
+    margin: 75px 50px;
 }
 
 #login-form input {
-    border: hidden;
+    display: flex;
+    margin: 20px 20px;
+    border: none;
+    border-bottom: 2px solid #455262;
+    font-size: 1.4em;
 }
 
 #login-form input:focus {
     outline: none;
+    border-bottom: 2px solid #3D454E;
 }
 
-#text-logo {
+#login-form button {
+    padding: 10px;
+    border: 2px solid rgb(3, 108, 206);
+    border-radius: 5px;
+    margin-top: 34px;
+    transition: 320ms;
+}
 
+#login-form button:hover {
+    background-color: rgb(3, 108, 206);
+    color: white;
+}
+
+.list-data {
+    margin-top: 80px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#data-table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+#data-table th {
+    background-color: rgb(27, 255, 225);
+    padding: 10px;
+    border-radius: 1px;
 }
