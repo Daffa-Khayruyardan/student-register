@@ -6,9 +6,22 @@
             <th>Last Name</th>
             <th>Age</th>
             <th>Country</th>
+            <th>Action</th>
         </tr>
         <tr>
-            <td></td>
+            <% for (user_row of data) { %>
+                <tr>
+                    <td><%= user_row.id %> </td>
+                    <td><%= user_row.firstname %> </td>
+                    <td><%= user_row.lastname %> </td>
+                    <td><%= user_row.age %> </td>
+                    <td><%= user_row.country %> </td>
+                    <td>
+                        <button id="edit">Edit</button>
+                        <button id="del">Delete</button>
+                    </td>
+                </tr> 
+            <% } %> 
         </tr>
     </table>
 </div>

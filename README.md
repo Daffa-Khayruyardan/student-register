@@ -1,6 +1,5 @@
-# Hello World
--------------------
-# Simple Student Data 
+<p align="center">
+    <img width="140" height="200" src="assets/registration_data.png">
+</p>
 
-### GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
-
+-------------

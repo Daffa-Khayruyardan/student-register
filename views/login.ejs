@@ -2,11 +2,12 @@
     <div id="text-logo">
         Login
     </div>
-    <form action="" id="login-form">        
-        <input type="text" placeholder="First name">
-        <input type="text" placeholder="Last name">
-        <input type="text" placeholder="Age">
-        <input type="text" placeholder="Country">
-        <button>Login</button>
+    <form action="/add" method="post" id="login-form">   
+        <input type="text" name="id" placeholder="ID">     
+        <input type="text" name="firstname" placeholder="First name">
+        <input type="text" name="lastname" placeholder="Last name">
+        <input type="text" name="age" placeholder="Age">
+        <input type="text" name="country" placeholder="Country">
+        <button type="submit">Submit</button>
     </form>
 </div>

@@ -12,6 +12,7 @@ const PORT = 3000;
 // setup some middleware here
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(ejsLayout);
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true }));
 
 // set view engine and views folder
