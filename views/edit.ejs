@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/style/style.css">
+
+<div class="login">
+    <div id="text-logo">
+        Update
+    </div>
+    <form action="/add" method="post" id="login-form">       
+        <input type="text" name="name" value="<%= data.name  %>" placeholder="Name">
+        <input type="text" name="email" value="<%= data.email %>" placeholder="Email">
+        <input type="text" name="age" value="<%= data.age %>" placeholder="Age">
+        <input type="text" name="country" value="<%= data.country %>" placeholder="Country">
+        <button type="submit">Submit</button>
+    </form>
+</div>
