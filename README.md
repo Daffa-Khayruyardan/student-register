@@ -29,4 +29,21 @@
 |  2 | Other    | Other@gmail.com    | 22 | Spanyol |
 
 ## Usage 
-# Install Dependencies
+### Install Dependencies
+```
+$ npm i express ejs express-ejs-layouts body-parser mysql --save
+```
+For development purpose add some dependencies
+```
+$ npm i gulp gulp-terser gulp-clean-css --save-dev 
+```
+
+### Run web server
+```
+$ npm run serve 
+```
+
+If you want to minify css and javascript file you can type
+```
+$ 
+```
