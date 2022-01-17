@@ -43,7 +43,9 @@ $ npm i gulp gulp-terser gulp-clean-css --save-dev
 ```
 $ npm run serve 
 ```
+
 <br>
+
 <font size="5">NOTE : If you want to minify css and javascript file you can type</font>
 ```
 $ 
