@@ -4,7 +4,7 @@
 
 -------------
 <font size="4"> 
-    Student Regristration for student who start go to school soon. Simple and fast CRUD web application to make record of student biodata for school registration.
+    Student Regristration for student who start go to school soon. Simple and fast CRUD web application to make record of student biodata for school registration. There's dev branch for development purpose and added gulpfile to minify css and javacsript file.
 </font>
 
 <br>
@@ -46,7 +46,7 @@ $ npm run serve
 
 <br>
 
-<font size="5">NOTE : If you want to minify css and javascript file you can type</font>
+<font size="5">**NOTE** : If you want to minify css and javascript file you can run gulp</font>
 ```
-$ 
+$ npm run build
 ```
