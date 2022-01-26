@@ -4,6 +4,7 @@ const path = require('path');
 const ejsLayout = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 const UserRoutes = require('./routes/UserRoute');
+const fs = require('fs');
 
 // initiate some variable
 const app = express();

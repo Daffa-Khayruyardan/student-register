@@ -1,3 +1,5 @@
+// make simple gulpfile to minify js and css file
+
 // import some packages here
 const { src, dest, series } = require('gulp');
 const gulpCleanCss = require('gulp-clean-css');
